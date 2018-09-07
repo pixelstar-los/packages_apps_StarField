@@ -55,6 +55,14 @@
         android:key="spoofing_app_specific_category"
         android:title="@string/spoofing_app_specific_category">
 
+        <!-- Sensor block per package -->
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="sensor_block"
+            android:icon="@drawable/ic_remote"
+            android:title="@string/sensor_block_title"
+            android:summary="@string/sensor_block_summary"
+            android:defaultValue="false" />
+
         <!-- Google Photos -->
         <com.android.settings.custom.preference.SystemPropertySwitchPreference
             android:key="persist.sys.pixelprops.gphotos"
