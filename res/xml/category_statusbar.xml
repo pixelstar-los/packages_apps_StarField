@@ -17,6 +17,15 @@
      android:title="@string/category_statusbar_title" >
 
     <PreferenceCategory
+        android:title="@string/icons_category" >
+            <com.android.settings.custom.preference.SystemSettingSwitchPreference
+                android:key="data_disabled_icon"
+                android:title="@string/data_disabled_icon_title"
+                android:summary="@string/data_disabled_icon_summary"
+                android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="prirvacy"
         android:title="@string/privacy_ind" >
 
@@ -37,7 +46,7 @@
                android:title="@string/projection_privacy_indicator_title"
                android:summary="@string/projection_privacy_indicator_summary"
                android:defaultValue="true" />
-               
+
     </PreferenceCategory>
     
 </PreferenceScreen>

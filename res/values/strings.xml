@@ -53,6 +53,7 @@
     <string name="privacy_ind">Privacy Indicators</string>
     <string name="ls_category">Lockscreen</string>
     <string name="spoofing_category">Spoofing</string>
+    <string name="icons_category">Icons</string>
 
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
@@ -112,4 +113,8 @@
     <!-- Spoof storage encryption status -->
     <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
     <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted.</string>
+
+    <!-- Data disabled icon -->
+    <string name="data_disabled_icon_title">Show data disabled icon</string>
+    <string name="data_disabled_icon_summary">Display the cross sign next to signal bar when data is disabled</string>
 </resources>
