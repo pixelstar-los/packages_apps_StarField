@@ -19,13 +19,19 @@
     <PreferenceCategory
         android:key="general_category"
 	   android:title="@string/general_category" >
-        <!-- Quick pull down -->
-        <lineageos.preference.LineageSystemSettingListPreference
-            android:key="qs_quick_pulldown"
-            android:title="@string/status_bar_quick_pull_down_title"
-            android:entries="@array/status_bar_quick_pull_down_entries"
-            android:entryValues="@array/status_bar_quick_pull_down_values"
-            android:defaultValue="0" />
+          <com.android.settings.custom.preference.SystemSettingSwitchPreference
+               android:key="qs_show_data_usage"
+               android:title="@string/qs_show_data_usage_title"
+               android:summary="@string/qs_show_data_usage_summary"
+               android:defaultValue="true" />
+
+          <!-- Quick pull down -->
+          <lineageos.preference.LineageSystemSettingListPreference
+               android:key="qs_quick_pulldown"
+               android:title="@string/status_bar_quick_pull_down_title"
+               android:entries="@array/status_bar_quick_pull_down_entries"
+               android:entryValues="@array/status_bar_quick_pull_down_values"
+               android:defaultValue="0" />
     </PreferenceCategory>
 
     <PreferenceCategory
