@@ -16,4 +16,28 @@
      xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
      android:title="@string/category_statusbar_title" >
 
+    <PreferenceCategory
+        android:key="prirvacy"
+        android:title="@string/privacy_ind" >
+
+          <com.android.settings.custom.preference.SecureSettingSwitchPreference
+               android:key="enable_camera_privacy_indicator"
+               android:title="@string/mic_camera_privacy_indicator_title"
+               android:summary="@string/mic_camera_privacy_indicator_summary"
+               android:defaultValue="true" />
+
+          <com.android.settings.custom.preference.SecureSettingSwitchPreference
+               android:key="enable_location_privacy_indicator"
+               android:title="@string/location_privacy_indicator_title"
+               android:summary="@string/location_privacy_indicator_summary"
+               android:defaultValue="true" />
+
+          <com.android.settings.custom.preference.SecureSettingSwitchPreference
+               android:key="enable_projection_privacy_indicator"
+               android:title="@string/projection_privacy_indicator_title"
+               android:summary="@string/projection_privacy_indicator_summary"
+               android:defaultValue="true" />
+               
+    </PreferenceCategory>
+    
 </PreferenceScreen>
