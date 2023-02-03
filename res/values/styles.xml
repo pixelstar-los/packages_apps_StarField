@@ -45,4 +45,8 @@
     <style name="text_style_base">
         <item name="android:breakStrategy">simple</item>
     </style>
+
+    <!-- Monet wallpaper -->
+    <style name="Theme.WallpaperColorPicker.Dialog.Alert" parent="@android:style/Theme.DeviceDefault.Dialog.Alert">
+    </style>
 </resources>
