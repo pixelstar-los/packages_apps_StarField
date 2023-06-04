@@ -52,6 +52,7 @@
     <string name="headsup_category">Heads-up</string>
     <string name="privacy_ind">Privacy Indicators</string>
     <string name="ls_category">Lockscreen</string>
+    <string name="spoofing_category">Spoofing</string>
 
     <!-- [CHAR_LIMIT=NONE] Developer Settings: Title of the setting which enables overlays to customize the adaptive icon shape (e.g. launcher and quick settings icons). -->
     <string name="theme_customization_icon_shape_title">Icon shape</string>
@@ -107,4 +108,8 @@
     <!-- Lockscreen battery info indicator  -->
    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
    <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lockscreen while charging</string>
+   
+    <!-- Spoof storage encryption status -->
+    <string name="spoof_storage_encryption_status_title">Use storage encryption spoofing</string>
+    <string name="spoof_storage_encryption_status_summary">Spoof storage encryption status to encrypted.</string>
 </resources>

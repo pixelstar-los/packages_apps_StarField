@@ -49,4 +49,15 @@
                android:defaultValue="false"/>
 
     </PreferenceCategory>
+    
+    <PreferenceCategory
+	   android:title="@string/spoofing_category" >
+
+          <com.android.settings.custom.preference.SecureSettingSwitchPreference
+               android:key="spoof_storage_encryption_status"
+               android:title="@string/spoof_storage_encryption_status_title"
+               android:summary="@string/spoof_storage_encryption_status_summary"
+               android:defaultValue="false"/>
+
+    </PreferenceCategory>     
 </PreferenceScreen>
