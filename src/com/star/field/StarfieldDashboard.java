@@ -64,7 +64,7 @@ public class StarfieldDashboard extends SettingsPreferenceFragment implements Vi
         } else if (v == themes) {
             startActivity("ThemeActivity");
         } else if (v == fonts) {
-            startActivity("FontsPickerActivity");
+            startActivity("FontPickerPreviewActivity");
         }
     }
 
