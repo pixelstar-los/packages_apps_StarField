@@ -37,6 +37,13 @@
                 android:summary="@string/data_disabled_icon_summary"
                 android:defaultValue="true"/>
                 
+
+            <com.android.settings.custom.preference.SystemSettingSwitchPreference
+                    android:key="statusbar_colored_icons"
+                    android:title="@string/statusbar_colored_icons_title"
+                    android:summary="@string/statusbar_colored_icons_summary"
+                    android:defaultValue="false" />
+                    
     </PreferenceCategory>
 
     <PreferenceCategory
