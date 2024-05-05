@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2024 Project Pixelstar
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Status bar - Quick pull down -->
+    <string-array name="status_bar_quick_pull_down_entries" translatable="false">
+        <item>@string/status_bar_quick_pull_down_off</item>
+        <item>@string/status_bar_quick_pull_down_right</item>
+        <item>@string/status_bar_quick_pull_down_left</item>
+        <item>@string/status_bar_quick_pull_down_both</item>
+    </string-array>
+
+    <string-array name="status_bar_quick_pull_down_entries_rtl" translatable="false">
+        <item>@string/status_bar_quick_pull_down_off</item>
+        <item>@string/status_bar_quick_pull_down_left</item>
+        <item>@string/status_bar_quick_pull_down_right</item>
+        <item>@string/status_bar_quick_pull_down_both</item>
+    </string-array>
+
+    <string-array name="status_bar_quick_pull_down_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="status_bar_quick_pull_down_values_rtl" translatable="false">
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+        <item>3</item>
+    </string-array>
+</resources>

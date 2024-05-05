@@ -23,6 +23,7 @@
     <string name="reset_message">Reset all entries to default?</string>
     <string name="attention">Attention</string>
     <string name="reset">Reset</string>
+    <string name="general_category">General</string>
 
     <!-- Starfield -->
     <string name="build_tweaks_summary_title">Shine Like A Star</string>
@@ -60,4 +61,12 @@
     <string name="incall_vibrate_connect_title">Vibrate on connect</string>
     <string name="incall_vibrate_call_wait_title">Vibrate on call waiting</string>
     <string name="incall_vibrate_disconnect_title">Vibrate on disconnect</string>
+
+    <!-- Quick pull down -->
+    <string name="status_bar_quick_pull_down_title">Quick pull down</string>
+    <string name="status_bar_quick_pull_down_summary">%1$s of the status bar pulls down quick settings</string>
+    <string name="status_bar_quick_pull_down_off">Off</string>
+    <string name="status_bar_quick_pull_down_right">Right side</string>
+    <string name="status_bar_quick_pull_down_left">Left side</string>
+    <string name="status_bar_quick_pull_down_both">Both sides</string>
 </resources>
