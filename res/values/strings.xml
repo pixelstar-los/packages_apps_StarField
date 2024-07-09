@@ -153,6 +153,10 @@
     <string name="edge_light_repeat_animation_summary_off">Show only once</string>
     <string name="edge_light_color_mode_title">Edge light color mode</string>
 
+    <!-- Unlimit screenrecord -->
+    <string name="miscellaneous_unlimit_screenrecord_title">Unlimit screenrecord</string>
+    <string name="miscellaneous_unlimit_screenrecord_summary">Remove the 15GiB file size limit\nMay result in a larger than needed output file</string>
+
      <!-- Ambient Ticker -->
      <string name="pulse_on_new_tracks_title">Music ticker</string>
      <string name="pulse_on_new_tracks_summary">Show music ticker on Ambient Display during track change</string>
