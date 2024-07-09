@@ -37,6 +37,12 @@
                android:summary="@string/lockscreen_battery_info_summary"
                android:defaultValue="true" />
      
+          <com.android.settings.custom.preference.SecureSettingSwitchPreference
+               android:key="pulse_on_new_tracks"
+               android:title="@string/pulse_on_new_tracks_title"
+               android:summary="@string/pulse_on_new_tracks_summary"
+               android:defaultValue="false" />
+
           <Preference
                android:key="edge_light_settings"
                android:title="@string/edge_light_title"
