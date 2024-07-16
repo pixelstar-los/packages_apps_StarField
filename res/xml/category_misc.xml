@@ -83,6 +83,12 @@
     <PreferenceCategory
 	   android:title="@string/spoofing_category" >
 
+          <com.android.settings.custom.preference.SystemPropertySwitchPreference
+               android:key="persist.sys.pixelprops.gphotos"
+               android:title="@string/unlimited_photos_storage_title"
+               android:summary="@string/unlimited_photos_storage_summary"
+               android:defaultValue="true"/>
+
           <com.android.settings.custom.preference.SecureSettingSwitchPreference
                android:key="spoof_storage_encryption_status"
                android:title="@string/spoof_storage_encryption_status_title"
