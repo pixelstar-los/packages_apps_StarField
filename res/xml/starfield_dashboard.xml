@@ -19,6 +19,7 @@
     <!-- Starfield Header -->
     <com.android.settingslib.widget.LayoutPreference
         android:layout="@layout/starfield_header"
+        android:clickable="false"
         android:key="starfield_header" />
 
     <PreferenceCategory

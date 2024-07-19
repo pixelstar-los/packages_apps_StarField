@@ -24,6 +24,8 @@
             android:layout_marginEnd="8.0dip"
             app:cardCornerRadius="24.0dip"
             app:cardElevation="0.0dip"
+            app:strokeColor="?android:attr/textColorPrimary"
+            app:strokeWidth="2dp"
             app:rippleColor="?android:colorControlHighlight">
 
             <com.star.field.utils.WallpaperCardView
