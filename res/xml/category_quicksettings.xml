@@ -32,6 +32,13 @@
                android:entries="@array/status_bar_quick_pull_down_entries"
                android:entryValues="@array/status_bar_quick_pull_down_values"
                android:defaultValue="0" />
+
+        <SwitchPreferenceCompat
+            android:key="qs_split_shade"
+            android:title="@string/qs_split_shade_title"
+            android:summary="@string/qs_split_shade_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

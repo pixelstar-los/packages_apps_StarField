@@ -31,7 +31,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceScreen;
-import androidx.preference.SwitchPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -41,6 +41,7 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.Indexable;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.android.internal.util.pixelstar.ThemeUtils;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -65,6 +66,19 @@ public class QuickSettings extends SettingsPreferenceFragment
     private static final int PULLDOWN_DIR_LEFT = 2;
     private static final int PULLDOWN_DIR_BOTH = 3;
 
+    private static final String KEY_QS_SPLIT_SHADE = "qs_split_shade";
+
+    private static final String QS_SPLIT_SHADE_LAYOUT_CTG = "android.theme.customization.qs_landscape_layout";
+    private static final String QS_SPLIT_SHADE_LAYOUT_PKG = "com.android.systemui.qs.landscape.split_shade_layout";
+    private static final String QS_SPLIT_SHADE_LAYOUT_TARGET = "com.android.systemui";
+    private static final String QS_SPLIT_SHADE_CUTOUT_CTG = "android.theme.customization.qs_landscape_cutout";
+    private static final String QS_SPLIT_SHADE_CUTOUT_PKG = "android.landscape.split_shade_cutout";
+    private static final String QS_SPLIT_SHADE_CUTOUT_TARGET = "android";
+
+    private SwitchPreferenceCompat mSplitShade;
+
+    private ThemeUtils mThemeUtils;
+
     private PreferenceCategory mInterfaceCategory;
     private LineageSecureSettingListPreference mShowBrightnessSlider;
     private LineageSecureSettingListPreference mBrightnessSliderPosition;
@@ -76,6 +90,7 @@ public class QuickSettings extends SettingsPreferenceFragment
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.category_quicksettings);
         PreferenceScreen prefSet = getPreferenceScreen();
+        mThemeUtils = new ThemeUtils(getContext());
 
         final Context context = getContext();
         final ContentResolver resolver = context.getContentResolver();
@@ -109,6 +124,11 @@ public class QuickSettings extends SettingsPreferenceFragment
             mQuickPulldown.setEntries(R.array.status_bar_quick_pull_down_entries_rtl);
             mQuickPulldown.setEntryValues(R.array.status_bar_quick_pull_down_values_rtl);
         }
+
+        mSplitShade = findPreference(KEY_QS_SPLIT_SHADE);
+        boolean ssEnabled = isSplitShadeEnabled();
+        mSplitShade.setChecked(ssEnabled);
+        mSplitShade.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -125,8 +145,35 @@ public class QuickSettings extends SettingsPreferenceFragment
             if (mShowAutoBrightness != null)
                 mShowAutoBrightness.setEnabled(value > 0);
             return true;
+        } else if (preference == mSplitShade) {
+            updateSplitShadeState((Boolean) newValue);
+            return true;
         }
         return false;
+    }
+
+    private boolean isSplitShadeEnabled() {
+        return mThemeUtils.isOverlayEnabled(QS_SPLIT_SHADE_LAYOUT_PKG)
+            && mThemeUtils.isOverlayEnabled(QS_SPLIT_SHADE_CUTOUT_PKG);
+    }
+
+    private void updateSplitShadeState(boolean enable) {
+        mThemeUtils.setOverlayEnabled(
+                QS_SPLIT_SHADE_LAYOUT_CTG,
+                enable ? QS_SPLIT_SHADE_LAYOUT_PKG : QS_SPLIT_SHADE_LAYOUT_TARGET,
+                QS_SPLIT_SHADE_LAYOUT_TARGET);
+
+        mThemeUtils.setOverlayEnabled(
+                QS_SPLIT_SHADE_CUTOUT_CTG,
+                enable ? QS_SPLIT_SHADE_CUTOUT_PKG : QS_SPLIT_SHADE_CUTOUT_TARGET,
+                QS_SPLIT_SHADE_CUTOUT_TARGET);
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        ThemeUtils themeUtils = new ThemeUtils(mContext);
+        themeUtils.setOverlayEnabled(QS_SPLIT_SHADE_LAYOUT_CTG, QS_SPLIT_SHADE_LAYOUT_TARGET, QS_SPLIT_SHADE_LAYOUT_TARGET);
+        themeUtils.setOverlayEnabled(QS_SPLIT_SHADE_CUTOUT_CTG, QS_SPLIT_SHADE_CUTOUT_TARGET, QS_SPLIT_SHADE_CUTOUT_TARGET);
     }
 
     private void updateQuickPulldownSummary(int value) {
