@@ -423,4 +423,8 @@
     <!-- QS split shade -->
     <string name="qs_split_shade_title">Split Shade</string>
     <string name="qs_split_shade_summary">Split QS layout in landscape mode</string>
+
+    <!-- Status bar Icon Manager -->
+    <string name="icon_manager_title">Icon manager</string>
+    <string name="icon_manager_summary">Control visibility of status bar icons</string>
 </resources>
